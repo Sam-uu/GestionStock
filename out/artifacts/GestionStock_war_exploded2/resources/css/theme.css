@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    padding: 0;
+    background:  linear-gradient(135deg, #111, #222);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container {
+    --form-width: 480px;
+    --aspect-ratio: 1.4;
+    --login-box-color: #272727;
+    --input-color: #3a3a3a;
+    --button-color: #373737;
+    --footer-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: none;
+    border-radius: 24px;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    z-index: 8;
+    box-shadow:none;
+    transform: translateY(30px);
+}
+.container::before {
+    display: none;
+}
+
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.login-box {
+    background:transparent ;
+    border-radius:0;
+    padding:0;
+    width: 100%;
+    max-width: 95vw;
+    height: auto;
+    position: static;
+    z-index: 10;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    overflow: visible !important;
+    max-height: none !important;
+
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.2),
+            rgba(0, 0, 0, 0.2)
+    );
+    box-shadow:
+            8px 8px 16px rgba(0, 0, 0, 0.2),
+            -8px -8px 16px rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
+    height: 20%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 2.5px solid #fff;
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    border: 2.5px solid #fff;
+}
+
+.user {
+    position: absolute;
+    height: 50px;
+    color: #fff;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 6px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: var(--input-color);
+    color: white;
+    outline: none;
+    font-size: 16px;
+}
+
+.input:focus {
+    border: 1px solid #fff;
+}
+
+.button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #8B0000, #B22222);
+    color: white;
+    transition: transform 0.2s ease;
+    box-shadow:
+            inset 0px 3px 6px -4px rgba(255, 255, 255, 0.6),
+            inset 0px -3px 6px -2px rgba(0, 0, 0, 0.8);
+}
+.sign-in {
+    margin-top: 5px;
+}
+
+.google-sign-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.button:hover {
+    background: rgba(139, 0, 0, 0.6);
+    box-shadow:
+            inset 0px 3px 6px rgba(255, 255, 255, 0.6),
+            inset 0px -3px 6px rgba(0, 0, 0, 0.8),
+            0px 0px 8px rgba(255, 255, 255, 0.05);
+    transform: scale(1.05);
+}
+
+.icon {
+    height: 16px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    color: var(--footer-color);
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.6;
+
+}
+
+.footer .link {
+    position: relative;
+    color: var(--footer-color);
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    border-radius: 6px;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.footer .link:hover {
+    color: #fff;
+}
+
+.footer .link:hover::after {
+    width: 100%;
+}
+.error {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+label {
+    color: white;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    display: block;
+}
+.action-link {
+    color: white;
+    background: none;
+    border: none;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 8px;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+    color: #ccc;
+}
+
+.button-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+}
+.low-stock {
+    background-color: #660000;
+    color: #fff;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.product-card {
+    background-color: #333;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 8px rgba(255,255,255,0.1);
+}
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.quantity-form {
+    display: none;
+    margin-top: 10px;
+}
+
+

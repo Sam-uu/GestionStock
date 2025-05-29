@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/CommandesFournisseurs/CommandesFournisseurs.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/CommandesFournisseurs" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Connexion/clientDashboard.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Connexion" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Connexion/dashboard.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Connexion" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Connexion/dashboardGestionnaire.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Connexion" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Connexion/inscription.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Connexion" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Produits/formProduit.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Produits" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+      </map>
+    </option>
+  </component>
+</project>
